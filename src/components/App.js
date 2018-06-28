@@ -9,35 +9,35 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hogs: hogs,
-      filters: null
+      greased: false,
+      sort: "all"
     };
   }
+  onClick = () => {
+    window.location = "www.google.com";
+  };
+  onSelectChange = e => {
+    let sort = e.target.value;
+    this.setState({ sort: sort });
+  };
 
-  handleFilters = filterOptions => {
-    this.setState({
-      ...this.state,
-      filters: {
-        sortBy: filterOptions.sortOption,
-        greased: filterOptions.greased
-      }
-    });
-    this.filterHogs();
+  onToggleGreased = () => {
+    this.setState({ greased: !this.state.greased });
   };
 
   filterHogs = () => {
-    let filteredHogs = this.state.hogs;
-    if (!this.state.filters) {
+    let filteredHogs = hogs;
+    if (!this.state.greased && !this.state.sort) {
       return filteredHogs;
     }
-    if (this.state.filters.greased) {
+    if (this.state.greased) {
       filteredHogs = filteredHogs.filter(hog => hog.greased);
     }
-    if (this.state.filters.sortBy === "name") {
+    if (this.state.sort === "name") {
       filteredHogs = filteredHogs.sort((a, b) => {
         return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
       });
-    } else if (this.state.filters.sortBy === "weight") {
+    } else if (this.state.sort === "weight") {
       filteredHogs = filteredHogs.sort((a, b) => {
         return (
           b[
@@ -55,8 +55,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav />
-        <Filter onFilter={this.handleFilters} />
+        <Nav secretClick={this.onClick} />
+        <Filter
+          handleSelectChange={this.onSelectChange}
+          sortBy={this.state.sort}
+          handleToggleGreased={this.onToggleGreased}
+          greased={this.state.greased}
+        />
         <HogList hogs={this.filterHogs()} />
       </div>
     );
