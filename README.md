@@ -25,7 +25,7 @@
 
 React thinking:
 1)Come in with static components and mock drawing
-![mock]('./mock.png')
+[mock](./mock.png)
 2)start thinking about data:
 
 App.js -->

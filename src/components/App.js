@@ -3,6 +3,7 @@ import "../App.css";
 import Nav from "./Nav";
 import HogList from "./HogList";
 import Filter from "./Filter";
+import hogs from "../porkers_data";
 
 class App extends Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class App extends Component {
       <div className="App">
         <Nav />
         <Filter />
-        <HogList />
+        <HogList hogs={hogs} />
       </div>
     );
   }
