@@ -1,11 +1,11 @@
 import React from "react";
 
-const Filter = props => {
+const Filter = () => {
   return (
     <div className="filterWrapper">
       <form>
         <label>Sort By: </label>
-        <select name="sort" value="all">
+        <select name="sort">
           <option value="name">Name</option>
           <option value="weight">Weight</option>
         </select>

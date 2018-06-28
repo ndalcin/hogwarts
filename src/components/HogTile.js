@@ -1,13 +1,6 @@
 import React from "react";
 
 class HogTile extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      clicked: false
-    };
-  }
-
   getImage = hogName => {
     let formattedName = hogName
       .split(" ")
@@ -15,11 +8,6 @@ class HogTile extends React.Component {
       .toLowerCase();
     let pigPics = require(`../hog-imgs/${formattedName}.jpg`);
     return pigPics;
-  };
-
-  handleDetailsClick = () => {
-    //when clicked, change clicked to true
-    this.setState({ clicked: !this.state.clicked });
   };
 
   render() {
