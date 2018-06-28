@@ -6,8 +6,8 @@
 
 1.  Create an index displaying all hog tiles ✅
 2.  Render each hog name and picture in a tile ✅
-3.  Show the hog's details upon a user's click
-4.  Allow users to sort the hogs based on name and weight
+3.  Show the hog's details upon a user's click ✅
+4.  Allow users to sort the hogs based on name and weight ✅
 5.  Filter the hogs that are greased
 
 ## Project requirements:
