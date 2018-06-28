@@ -3,7 +3,6 @@ import "../App.css";
 import Nav from "./Nav";
 import HogList from "./HogList";
 import Filter from "./Filter";
-import hogs from "../porkers_data";
 
 class App extends Component {
   constructor(props) {
@@ -55,14 +54,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav secretClick={this.onClick} />
-        <Filter
-          handleSelectChange={this.onSelectChange}
-          sortBy={this.state.sort}
-          handleToggleGreased={this.onToggleGreased}
-          greased={this.state.greased}
-        />
-        <HogList hogs={this.filterHogs()} />
+        <Nav />
+        <Filter />
+        <HogList />
       </div>
     );
   }

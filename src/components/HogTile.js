@@ -37,21 +37,14 @@ class HogTile extends React.Component {
         <div className="content">
           <h3 className="header">{name}</h3>
           <div className="meta">
-            <button id="details" onClick={this.handleDetailsClick}>
-              {this.state.clicked ? "Hide Details" : "More Details"}
-            </button>
+            <p>Specialty: {specialty}</p>
+            <p>Highest medal achived: {medal}</p>
+            <p>
+              weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door
+              Refrigerator with Thru-the-Door Ice and Water:
+              {weight}
+            </p>
           </div>
-          {this.state.clicked ? (
-            <div className="description">
-              <p>Specialty: {specialty}</p>
-              <p>Highest medal achived: {medal}</p>
-              <p>
-                weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door
-                Refrigerator with Thru-the-Door Ice and Water:
-                {weight}
-              </p>
-            </div>
-          ) : null}
         </div>
       </div>
     );
