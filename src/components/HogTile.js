@@ -25,6 +25,7 @@ class HogTile extends React.Component {
         <div className="content">
           <h3 className="header">{name}</h3>
           <div className="meta">
+            {/* display meta div on click?*/}
             <p>Specialty: {specialty}</p>
             <p>Highest medal achived: {medal}</p>
             <p>

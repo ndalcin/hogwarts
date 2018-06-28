@@ -23,8 +23,10 @@
 * App.js rendering Nav , Filter , and HogList components
 * App passing hogs as a prop to HogList
 * HogList mapping through hogs and rendering HogTiles for each hog object
+* HogTiles are getting their own picture and rendering the image, name, and details in a card
+* Filter html is finished, but nothing happens when you change the select option or check the checkbox
 
-  1)Static components and mock drawing:
+  1)Mock:
 
 ![mock](./mock.png)
 
@@ -34,6 +36,7 @@ App.js -->
 
 * Primary stateful component
 * state structure: { greased: boolean, sortType: string }
+* Why are hogs not in state?
 * As state changes, array of hogs passed down to HogList will change
 * How do we get the app's state to change when filter changes or greased is checked/unchecked?
 
@@ -41,16 +44,18 @@ Filter.js -->
 
 * has dropdown for filter type
 * has checkbox for greased vs ungreased
-* how do we get the changes on the filter component to the hoglist component?
+* how do we get the changes on the filter component to the HogList component?
 
 HogList.js -->
 
 * probably just a container component
-* Maps over the sorted hogs array (coming in as props from App)
+* Maps over the sorted/filtered hogs array (coming in as props from App)
 * Renders a HogTile for each hog in array (don't forget unique keys!)
-* pass hog object to HogTile as props
+* Pass hog object to HogTile as props
 
 HogTile.js -->
 
-* class based component so that it can get its own image (getImage function)
-* how will get the additional details to display on a user's click?
+* Class based component so that it can get its own image (getImage function)
+* How will we get the additional details to display on a user's click?
+
+_EXTRA CREDIT FOR THE PERSON WHO CAN FIND THE EASTER EGG IN THIS APP_
