@@ -32,25 +32,25 @@
 
 App.js -->
 
--Primary stateful component
--state structure: { greased: boolean, sortType: string }
--As state changes, array of hogs passed down to HogList will change
--How do we get the app's state to change when filter changes or greased is checked/unchecked?
+* Primary stateful component
+* state structure: { greased: boolean, sortType: string }
+* As state changes, array of hogs passed down to HogList will change
+* How do we get the app's state to change when filter changes or greased is checked/unchecked?
 
 Filter.js -->
 
--has dropdown for filter type
--has checkbox for greased vs ungreased
--how do we get the changes on the filter component to the hoglist component?
+* has dropdown for filter type
+* has checkbox for greased vs ungreased
+* how do we get the changes on the filter component to the hoglist component?
 
 HogList.js -->
 
--probably just a container component
--Maps over the sorted hogs array (coming in as props from App)
--Renders a HogTile for each hog in array (don't forget unique keys!)
--pass hog object to HogTile as props
+* probably just a container component
+* Maps over the sorted hogs array (coming in as props from App)
+* Renders a HogTile for each hog in array (don't forget unique keys!)
+* pass hog object to HogTile as props
 
 HogTile.js -->
 
--class based component so that it can get its own image (getImage function)
--how will get the additional details to display on a user's click?
+* class based component so that it can get its own image (getImage function)
+* how will get the additional details to display on a user's click?
