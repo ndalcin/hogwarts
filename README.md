@@ -23,9 +23,11 @@
 * App.js rendering Nav , Filter , and HogList components
 * App passing hogs as a prop to HogList
 
+![mock](./mock.png)
+
 React thinking:
 1)Come in with static components and mock drawing
-[mock](./mock.png)
+
 2)start thinking about data:
 
 App.js -->
