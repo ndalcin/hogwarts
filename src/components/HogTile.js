@@ -1,15 +1,7 @@
 import React from "react";
+const hog = require("../cherub.png");
 
 class HogTile extends React.Component {
-  getImage = hogName => {
-    let formattedName = hogName
-      .split(" ")
-      .join("_")
-      .toLowerCase();
-    let pigPics = require(`../hog-imgs/${formattedName}.jpg`);
-    return pigPics;
-  };
-
   render() {
     const { name, specialty } = this.props.hog;
     const weight = this.props.hog[
@@ -20,7 +12,7 @@ class HogTile extends React.Component {
     return (
       <div className="ui card eight wide column">
         <div className="image">
-          <img src={this.getImage(name)} alt="hogPic" />
+          <img src={hog} />
         </div>
         <div className="content">
           <h3 className="header">{name}</h3>
