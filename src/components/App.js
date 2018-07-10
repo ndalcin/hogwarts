@@ -48,7 +48,6 @@ class App extends Component {
     }
   };
 
-<<<<<<< HEAD
   sortHogs = () => {
     let previouslyFiltered = this.filterGreased();
     switch (this.state.sortBy) {
@@ -102,54 +101,6 @@ class App extends Component {
       </div>
     );
   }
-=======
-	sortHogs = () => {
-		let previouslyFiltered = this.filterGreased()
-		switch (this.state.sortBy) {
-			case 'weight':
-				return previouslyFiltered.sort((a, b) => {
-					const weight =
-						'weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water'
-					return a[weight] - b[weight]
-				})
-			case 'name':
-				return previouslyFiltered.sort((a, b) => {
-					return a.name.localeCompare(b.name)
-				})
-			default:
-				return previouslyFiltered
-		}
-	}
-
-	render() {
-		return (
-			<div className="ui grid container App">
-				<div className="sixteen wide column centered">
-					<Nav />
-				</div>
-				<div className="sixteen wide column centered">
-					<Filter
-						handleToggleGreased={this.handleToggleGreased}
-						handleSelectChange={this.handleSelectChange}
-						showBanished={this.showHiddenHogs}
-					/>
-				</div>
-				<div className="fourteen wide column centered">
-					{this.state.showBanished ? (
-						<BanishedHogs fetchGIF={this.fetchGIF} hogs={this.state.banished} />
-					) : null}
-				</div>
-
-				<div className="sixteen wide column centered">
-					<HogList
-						handleBanishedClick={this.banishHog}
-						hogs={this.sortHogs()}
-					/>
-				</div>
-			</div>
-		)
-	}
->>>>>>> 846b8b6b000aad59a1bfe244f24e940948bd23dc
 }
 
 export default App;
