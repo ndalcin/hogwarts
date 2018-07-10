@@ -84,8 +84,8 @@ class App extends Component {
 						<BanishedHogs fetchGIF={this.fetchGIF} hogs={this.state.banished} />
 					) : null}
 				</div>
-				<br />
-				<div className="centered">
+
+				<div className="sixteen wide column centered">
 					<HogList
 						handleBanishedClick={this.banishHog}
 						hogs={this.sortHogs()}
